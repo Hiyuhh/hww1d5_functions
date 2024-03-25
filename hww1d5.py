@@ -117,7 +117,6 @@ my_list()
 # Task 2: Implement a function to find the highest and lowest grade.
 # Task 3: Create a feature that categorizes grades into letter grades (A, B, C, etc.).
 grades = [50, 51, 67, 65, 54, 65, 80, 80, 91, 89, 98, 97]
-letter_grades = [ ]
 def avg(grades):
     total = sum(grades)
     return total / len(grades)
@@ -128,6 +127,7 @@ def hi_lo(grades):
     return [lowest, highest]
   
 def letter(grades):
+    letter_grades = [ ] #moved letter_grades list inside the function
     for grade in grades:
         if grade >= 90:
             letter_grades.append("A")
